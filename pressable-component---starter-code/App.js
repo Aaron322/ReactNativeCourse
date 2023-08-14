@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import * as React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-import LittleLemonHeader from './components/LittleLemonHeader'
-import LittleLemonFooter from './components/LittleLemonFooter'
-import LoginScreen from './LoginScreen'
+import LittleLemonHeader from './components/LittleLemonHeader';
+import LittleLemonFooter from './components/LittleLemonFooter';
+import LoginScreen from './LoginScreen';
 
 export default function App() {
   return (
@@ -16,7 +16,7 @@ export default function App() {
         <LittleLemonFooter />
       </View>
     </>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -25,4 +25,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#333333',
   },
   footerContainer: { backgroundColor: '#333333' },
-})
+});
+
+
