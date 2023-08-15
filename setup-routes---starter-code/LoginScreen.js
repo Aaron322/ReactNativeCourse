@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   ScrollView,
   Text,
   StyleSheet,
   TextInput,
   Pressable,
-} from 'react-native';
+} from 'react-native'
 
-export default function LoginScreen() {
-  const [email, onChangeEmail] = useState('');
-  const [password, onChangePassword] = useState('');
+export default function LoginScreen({ navigation }) {
+  const [email, onChangeEmail] = useState('')
+  const [password, onChangePassword] = useState('')
 
   return (
     <ScrollView style={styles.container}>
@@ -30,11 +30,14 @@ export default function LoginScreen() {
         keyboardType={'default'}
         secureTextEntry={true}
       />
-      <Pressable onPress={() => {}} style={styles.button}>
+      <Pressable
+        onPress={() => navigation.navigate('Welcome')}
+        style={styles.button}
+      >
         <Text style={styles.buttonText}>Log in</Text>
       </Pressable>
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -79,4 +82,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
   },
-});
+})
